@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            border: 2px solid #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: 2px solid #333;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>My Profile</h2>
+        <div id="profileView">
+            <p><strong>Name:</strong> <span id="profileName"></span></p>
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            <button onclick="editProfile()">Edit Profile</button>
+        </div>
+        
+        <div id="editProfileForm" style="display: none;">
+            <h3>Edit Profile</h3>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" value=>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value=>
+            </div>
+        
+            <button onclick="saveProfile()">Save</button>
+        </div>
+    </div>
+
+    <script>
+        function editProfile() {
+            document.getElementById('profileView').style.display = 'none';
+            document.getElementById('editProfileForm').style.display = 'block';
+        }
+
+        function saveProfile() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let skills = document.getElementById('skills').value;
+            
+            document.getElementById('profileName').innerText = name;
+            document.getElementById('profileEmail').innerText = email;
+            document.getElementById('profileSkills').innerText = skills;
+            
+            document.getElementById('editProfileForm').style.display = 'none';
+            document.getElementById('profileView').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
