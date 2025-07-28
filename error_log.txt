@@ -1,0 +1,5 @@
+[28-Feb-2025 13:26:05 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'freelancer_id' in 'where clause' in C:\xampp\htdocs\freelance job\login.php:51
+Stack trace:
+#0 C:\xampp\htdocs\freelance job\login.php(51): mysqli->prepare('SELECT id FROM ...')
+#1 {main}
+  thrown in C:\xampp\htdocs\freelance job\login.php on line 51

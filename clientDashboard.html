@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Dashboard</title>
+    <style>
+        /* Reset styles */
+body, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f5f5f5;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: lightgreen;
+    color: white;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar nav ul li a:hover {
+    background: #34495e;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.logout {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Main content */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+/* Header */
+header h2 {
+    margin-bottom: 20px;
+}
+
+/* Stats boxes */
+.stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    text-align: center;
+}
+
+/* Sections */
+.projects, .messages, .find-projects {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.projects ul, .messages ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.projects ul li, .messages ul li {
+    padding: 8px 0;
+}
+
+.projects ul li a, .messages ul li a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.projects ul li a:hover, .messages ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="freelancer_dashboard.html">🏠 Dashboard</a></li>
+                    <li><a href="freelancer_profile.html">👤 My Profile</a></li>
+                    <li><a href="freelancer_messages.html">💬 Messages</a></li>
+                    <li><a href="receive_payment.html">💰 Payments</a></li>
+                    <li><a href="freelancer_feedback.html">⭐ Feedback</a></li>
+                    <li><a href="logout.php" class="logout">🚪 Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+<main class="content">
+    <header>
+        <h2>Welcome, [Client Name]!</h2>
+    </header>
+    <section class="stats">
+        <div class="stat-box">
+            Reviews:  <br>
+            <button onclick="viewDetails('reviews')">View</button>
+        </div>
+        <div class="stat-box">
+            Analytics: <br>
+            <button onclick="viewDetails('analytics')">View</button>
+        </div>
+        <div class="stat-box">
+            Saved freelancers: <br>
+            <button onclick="viewDetails('saved_freelancers')">View</button>
+        </div>
+    </section>
+
+    
+</br>
+    <center>
+    <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Post A Job<i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+    </center>
+</main>
+<script>
+    function viewDetails(section) {
+        alert('Redirecting to ' + section + ' details.');
+        // You can replace the alert with window.location.href = 'your-link-here';
+    }
+</script>
+
+

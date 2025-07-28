@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Freelance Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: green;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .service-banner {
+            background-color: #f1f1f1;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .services-section {
+            padding: 40px 0;
+            background-color: #fafafa;
+        }
+
+        .service-category {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 23%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            margin: 15px 0;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #777;
+        }
+
+        .service-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #fff;
+            background-color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .service-card a:hover {
+            background-color: #45a049;
+        }
+
+        .additional-content {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+            color: #555;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>FREELANCE JOB PORTAL</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="service-banner">
+        <div class="container">
+            <h2>SERVICES</h2>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="service-category">
+                <div class="service-card">
+                    <h3>FOR FREELANCER</h3>
+                    <p>A freelance job portal provides various services to help freelancers find work, manage projects, and grow their careers. Here are some essential services offered</p>
+                    <a href="#" onclick="toggleContent('content1')">Explore</a>
+                    <div class="additional-content" id="content1">
+                        <p>A freelance job portal provides a wide range of services to help freelancers find work, manage projects, and grow their careers. These platforms act as a bridge between businesses and independent professionals, offering tools and resources to enhance productivity and security. Freelancers can search for jobs, submit proposals, and secure projects in various categories like web development, graphic design, content writing, and digital marketing. Additionally, they can create detailed profiles showcasing their skills, experience, and portfolios, which helps attract potential clients. Secure payment systems, such as escrow and milestone-based payments, ensure that freelancers receive their earnings safely. The portals also provide collaboration tools for seamless communication, including chat, video calls, and file sharing. Many platforms offer premium membership plans that come with benefits like priority project access, increased bidding limits, and featured profiles. Furthermore, freelancers can take advantage of skill development programs, online courses, and certifications to improve their expertise. To ensure a smooth experience, freelance job portals offer dispute resolution services and customer support to assist with any issues related to payments, contracts, or project disputes.</p>
+
+
+                        <ul>
+                            <li>Job Search & Bidding: Access to projects and the ability to bid on jobs</li>
+                            <li>Profile & Portfolio Management: Create and showcase expertise</li>
+                            <li>Membership Plans & Premium Features:Extra benefits like increased visibility</li>
+                            <li>Secure Payments & Invoicing:Escrow system and multiple payment options</li>
+                            <li>Skill Development & Certifications:Courses, tests, and badges to boost credibility</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <h3>FOR CLIENTS</h3>
+                    <p>A freelance job portal helps clients find and hire skilled professionals efficiently. It offers job posting, AI-based freelancer matching, secure payments, and project management tools</p>
+                    <a href="#" onclick="toggleContent('content2')">Explore</a>
+                    <div class="additional-content" id="content2">
+                        <p>A freelance job portal offers various services to clients, helping them find skilled freelancers, manage projects, and ensure quality work delivery. These platforms provide a seamless hiring process where clients can post job listings, review freelancer profiles, and select the best talent for their projects. The portals use AI-based matching algorithms to recommend freelancers based on skills, experience, and budget. Secure payment systems, such as escrow and milestone-based payments, protect both clients and freelancers, ensuring that payments are released only after satisfactory work completion. Additionally, built-in communication tools, such as messaging, video calls, and file sharing, enable smooth collaboration. Clients also benefit from project management features, including task tracking, milestone setting, and performance monitoring</p>
+                            <li>Job Posting & Talent Search :Create job listings and access a pool of skilled freelancers</li>
+                            <li>AI-Based Freelancer Matching :Get recommendations based on project requirements</li>
+                            <li>Secure Payment System :Escrow and milestone payments for safe transactions</li>
+                            <li>Project Management Tools :Track progress, set milestones, and manage deadlines</li>
+                            <li>Premium Hiring Assistance :Dedicated managers for talent sourcing and recruitment</li>
+                    </ul>
+                        </ul>
+                            
+                            
+                    </p>
+                </div>
+            </div>
+            <div class="service-card">
+                <h3>FOR BOTH FREELANCER AND CLIENT</h3>
+                <p> freelance job portal provides a seamless platform for both freelancers and clients to connect and collaborate</p>
+                <a href="#" onclick="toggleContent('content3')">Explore</a>
+                <div class="additional-content" id="content3">
+                    <p>A freelance job portal serves as a bridge between freelancers and clients, offering essential services for both. Freelancers can create profiles, showcase skills, browse job listings, submit proposals, manage projects, and receive secure payments, while clients can post jobs, find skilled professionals, review proposals, track progress, and ensure secure transactions. Both parties benefit from collaboration tools, time tracking, dispute resolution, contracts, and ratings, ensuring a smooth, transparent, and efficient work environment</p>
+                    <ul>
+                        <li>Profile Creation: Build a professional profile showcasing skills, experience, and portfolio.</li>
+                        <li>Job Posting: Post projects with detailed requirements to attract skilled freelancers.</li>
+                        <li>Time Tracking: Monitor freelancer activity and ensure efficient work hours.</li>
+                        <li>Ratings & Reviews: Build reputation through client feedback and ratings.</li>
+                        <li>Secure Payments: Get payments through escrow systems, milestone payments, or direct transfers.</li>
+                    </ul>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2025 Freelance Job Portal. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
